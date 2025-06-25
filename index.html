@@ -3,26 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <title>Ankit Kumar | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
-    h1, h2 { color: #333; }
-    .section { margin-bottom: 40px; }
-    .project { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-top: 15px; }
-    a { color: #007acc; text-decoration: none; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    header { background: #007acc; color: white; padding: 15px 20px; text-align: center; }
+    nav { background: #005f99; display: flex; flex-wrap: wrap; justify-content: center; }
+    nav a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover { background: #004e80; }
+
+    .section { margin: 40px 0; }
+    h2 { color: #333; margin-bottom: 10px; }
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .project {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .project img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    ul { padding-left: 20px; }
+    a { color: #007acc; }
     a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .profile { flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Ankit Kumar</h1>
-  <p><strong>Diploma in Computer Science & Engineering | Birla Technical Training Institute, Pilani</strong></p>
+  <header>
+    <h1>Ankit Kumar</h1>
+    <p>Diploma in Computer Science & Engineering | Birla Technical Training Institute, Pilani</p>
+  </header>
 
-  <div class="section">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="section" id="about">
     <h2>About Me</h2>
-    <p>I am a quick learner with strong skills in Python, data analysis, and cybersecurity. I enjoy working in teams and exploring new technologies.</p>
+    <div class="profile">
+      <img src="https://via.placeholder.com/150" alt="Profile Photo">
+      <p>I am a quick learner with strong skills in Python, data analysis, and cybersecurity. I enjoy working in teams and exploring new technologies.</p>
+    </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="skills">
     <h2>Skills</h2>
     <ul>
       <li>Python</li>
@@ -31,24 +87,26 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="section" id="projects">
     <h2>Projects</h2>
 
     <div class="project">
       <h3>Netflix Data Analysis</h3>
       <p>Analyzed Netflix movie dataset using Python (pandas, matplotlib). Visualized trends, top-rated shows, and content type over time.</p>
+      <img src="https://via.placeholder.com/600x200?text=Netflix+Analysis+Screenshot" alt="Netflix Project Screenshot">
       <p><a href="https://github.com/Ankitkumar532/netflix-analysis" target="_blank">View Project</a></p>
     </div>
 
     <div class="project">
       <h3>Student Performance Analysis</h3>
-      <p>Analyzed student performance data using Python (pandas, matplotlib). Explored relationships between scores, subjects, and other factors. Visualized key trends using charts.</p>
+      <p>Analyzed student performance data using Python (pandas, matplotlib). Explored relationships between scores, subjects, and other factors.</p>
+      <img src="https://via.placeholder.com/600x200?text=Student+Performance+Screenshot" alt="Student Project Screenshot">
       <p><a href="https://github.com/Ankitkumar532/student-performance-analysis" target="_blank">View Project</a></p>
     </div>
 
   </div>
 
-  <div class="section">
+  <div class="section" id="certifications">
     <h2>Certifications</h2>
     <ul>
       <li>Cybersecurity (Microsoft)</li>
@@ -57,12 +115,12 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="section" id="resume">
     <h2>Resume</h2>
     <p><a href="https://drive.google.com/file/d/1Cm2gtDWqLQCxc2JAx_oSrLDe5jiWdhmu/view?usp=drivesdk" target="_blank">Download Resume</a></p>
   </div>
 
-  <div class="section">
+  <div class="section" id="contact">
     <h2>Contact</h2>
     <p>Email: sumitankit92@gmail.com</p>
     <p>GitHub: <a href="https://github.com/Ankitkumar532" target="_blank">Ankitkumar532</a></p>
@@ -70,4 +128,3 @@
 
 </body>
 </html>
-
